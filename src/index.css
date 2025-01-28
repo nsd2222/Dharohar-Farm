@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Cinzel:wght@400;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: "Cinzel", -apple-system, BlinkMacSystemFont, Sans-serif;
+  --background-color: #faf6f1;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--background-color)] text-foreground;
+    font-family: "Cinzel", -apple-system, BlinkMacSystemFont, Sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+
