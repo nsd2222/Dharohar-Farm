@@ -6,30 +6,20 @@ const Rooms = () => {
       <div className="container mx-auto px-4 md:px-8">
         <h2 className="text-4xl font-800 text-tan text-center mb-8">Accommodation</h2>
         <p className="text-center text-white_smoke max-w-3xl mx-auto mb-8">
-          Escape to Dharohar Farmstay, featuring two charming accommodations with a total of 4 spacious bedrooms, each thoughtfully designed to blend comfort with the tranquility of Morni Hills.
+          Escape to Dharohar Farmstay, featuring a cozy retreat with a total of 3 spacious bedrooms, each thoughtfully designed to blend comfort with the tranquility of Morni Hills.
         </p>
 
-        <div className="flex justify-center gap-9 w-full md:w-2/3 mx-auto flex-wrap">
-          <img
-            src="/room1.jpg"
-            alt="Room 1"
-            className="h-[66vh] object-cover rounded-lg shadow-2xl mb-4 md:mb-0 w-full md:w-auto"
-          />
-          <img
-            src="/room2.jpg"
-            alt="Room 2"
-            className="h-[66vh] object-cover rounded-lg shadow-2xl mb-4 md:mb-0 w-full md:w-auto"
-          />
-          <img
-            src="/room3.jpg"
-            alt="Room 3"
-            className="h-[66vh] object-cover rounded-lg shadow-2xl mb-4 md:mb-0 w-full md:w-auto"
-          />
-          <img
-            src="/room4.jpg"
-            alt="Room 4"
-            className="h-[66vh] object-cover rounded-lg shadow-2xl mb-4 md:mb-0 w-full md:w-auto"
-          />
+        {/* Grid Layout for Rooms */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {["room1.jpg", "room2.jpg", "room4.jpg"].map((img, index) => (
+            <div key={index} className="overflow-hidden rounded-xl shadow-2xl">
+              <img
+                src={`/${img}`}
+                alt={`Room ${index + 1}`}
+                className="w-full h-[60vh] object-cover rounded-xl transition-transform duration-300 ease-in-out hover:scale-105"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
